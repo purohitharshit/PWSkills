@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hero-container{
+        border: 2px solid black;
+        margin: 1rem 4rem;
+        /* these two lines are important */
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 2rem 0.5rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .text-section{
+        padding: 2rem 4rem;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.3rem;
+    }
+    p{
+        color: gray;
+    }
+    img{
+        height: 570px;
+        width: 420px;
+        
+    }
+    .image-section{
+        background-color: yellow;
+        padding: 0 8rem 0 0;
+    }
+    .text-section button {
+        padding: 10px 50px;
+        border: 0;
+        background-color: #000;
+        color: #fff;
+        margin-top: 30px;
+        font-size: large;
+      }
+</style>
+<body>
+    <div class="hero-container">
+        <section class="text-section">
+            <h1>Healthy Food</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis optio sapiente velit laborum voluptatum itaque id quas, placeat ab suscipit dolores assumenda, exercitationem doloremque et consequatur unde incidunt, ipsam porro voluptas aliquid pariatur! At ut autem dolores iste beatae assumenda perferendis quia. Veritatis consequuntur vitae veniam voluptatum accusantium eveniet eos.</p>
+        <button>Read More</button>
+        </section>
+        <section class="image-section">
+            <img
+              src="https://media.istockphoto.com/id/870173346/photo/healthy-food.jpg?s=612x612&w=0&k=20&c=g6ewhe862ZaSQevMw7VS-VJzwXXEHL6Gqpr-fEDx0jY="
+              alt="Healthy Food"
+            />
+          </section>
+    </div>
+    <div class="image-section"></div>
+</body>
+</html>
