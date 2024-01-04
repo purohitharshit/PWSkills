@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            text-align: center;
+            justify-content: center;
+        }
+
+        div {
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sign Up Form</h1>
+    <form onsubmit="validateAndSubmit(event)">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="(Minimum 3 charecters)" name="name" id="name">
+        </div>
+
+        <div>
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter your email" name="email" id="email">
+        </div>
+
+        <div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="(Minimum 8 charecters)">
+
+            
+        </div>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <script>
+
+        function validateAndSubmit(event){
+            //The event refers to the event object that is automatically passed to event handler functions when an event occurs. This object contains information about the event, such as its type, the target element, and other relevant data.
+            event.preventDefault(); // without this page will reload on successful form submission by default
+            //preventDefault() is a method available on the event object. When called, it prevents the default behavior associated with the event from taking place.
+
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const password = document.getElementById("password");
+
+            if(name.value.length >=3 && password.value.length>=8 ){
+                alert("Form Validation Successful");
+            }else{
+                alert("Form validation Failed");
+            }
+        }
+    </script>
+</body>
+
+</html>

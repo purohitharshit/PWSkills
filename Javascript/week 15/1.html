@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Update Profile Picture</h1>
+    <input id="file-picker" type="file" onchange="changeProfile()">
+    <h3>Your Profile Picture</h3>
+    <img id="image" src="" alt="No Profile Picture">
+
+    <script>
+        const filePicker = document.getElementById("file-picker");
+        const image = document.getElementById("image");
+
+        function changeProfile() {
+            // Here, a new FileReader object is created.
+            const reader = new FileReader();
+
+            // This line sets up an event handler for when the FileReader has finished reading the content of the selected file. The onload event is triggered when the reading operation is complete. The provided function will be executed when this event occurs.
+            reader.onload = function (e) {
+                image.src = e.target.result;
+                //The e.target.result contains the data URL of the selected file, which represents the file's content as a base64-encoded string
+            }
+            reader.readAsDataURL(filePicker.files[0]);
+            //This line initiates the reading process. It uses the readAsDataURL method of the FileReader object to read the content of the selected file as a data URL. The filePicker.files[0] refers to the first selected file in the file picker input.
+        }
+    </script>
+</body>
+
+</html>

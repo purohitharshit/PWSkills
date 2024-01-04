@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            font-size:x-large;
+            font-weight: 800;
+        }
+        .timer{
+            border: 2px solid white;
+            padding: 20px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div id="timer" class="timer">
+        <span id="hours">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+    </div>
+
+    <script>
+        function timer(){
+
+            const currentTime = new Date();
+            const hours = currentTime.getHours().toString().padStart(2, "0");
+            const minutes = currentTime.getMinutes().toString().padStart(2,"0");
+            const seconds = currentTime.getSeconds().toString().padStart(2,"0");
+            const hexCode = `#${hours}${minutes}${seconds}`;
+            // const hexcode1 = `#${minutes}${seconds}${hours}`
+
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+           document.body.style.backgroundColor = hexCode;
+        //    document.body.style.color = hexcode1;
+        }
+
+        setInterval(timer,1000);
+    </script>
+</body>
+</html>

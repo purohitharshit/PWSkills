@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter a number</label>
+    <input type="number" id="num">
+
+    <button id="calculate">Calculate</button>
+    <p id="para"></p>
+
+    <script>
+        const numberInput = document.getElementById('num');
+        const calciButton = document.getElementById('calculate');
+        const resultParagraph = document.getElementById('para');
+
+        calciButton.addEventListener('click',()=>{
+
+            const inputValue= parseInt(numberInput.value);
+
+            let ans=1;
+            for(let i=1;i<=inputValue;i++){
+                ans=ans*i;
+            }
+           
+
+            resultParagraph.textContent = `Answer is : ${ans}`;
+
+        })
+
+
+    </script>
+
+
+
+</body>
+</html>
